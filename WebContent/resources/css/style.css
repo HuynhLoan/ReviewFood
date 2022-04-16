@@ -1,0 +1,20 @@
+@charset "UTF-8";
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .a{ 
+  font-size:30px;
+  }
+  table, th, td{
+		text-align: center;
+		border:1px solid;
+		background-color:Aqua;
+		font-size: 20px;
+		margin-left:120px;
+		margin-top:100px;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}

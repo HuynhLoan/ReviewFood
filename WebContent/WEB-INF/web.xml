@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Review food</display-name>
+  <welcome-file-list>
+    <welcome-file>homeServlet</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>Authentication</filter-name>
+    <filter-class>com.loan.reviewfood.fitler.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Authentication</filter-name>
+    <url-pattern>/indexAdmin</url-pattern>
+    <url-pattern>/updateFood</url-pattern>
+    <url-pattern>/insertFood</url-pattern>
+    <url-pattern>/logout</url-pattern>
+    <url-pattern>/deleteFood</url-pattern>
+    <url-pattern>/searchFood</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>Authorization</filter-name>
+    <filter-class>com.loan.reviewfood.fitler.AuthorizationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Authorization</filter-name>
+    <url-pattern>/indexAdmin</url-pattern>
+    <url-pattern>/deleteFood</url-pattern>
+    <url-pattern>/updateFood</url-pattern>
+    <url-pattern>/insertFood</url-pattern>
+  </filter-mapping>
+</web-app>
